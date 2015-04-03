@@ -15,9 +15,7 @@ public class Anunciante {
     private String login;
     private String senha;
 
-
-    public  Anunciante(String nome, String end, char sexo, String cpf, Date dtNas, String login, String senha) {
-
+    public Anunciante(String nome, String end, char sexo, String cpf, Date dtNas, String login, String senha) {
 
         nome = nome;
         end = end;
@@ -28,7 +26,4 @@ public class Anunciante {
         senha = senha;
 
     }
-
-
-
 }
