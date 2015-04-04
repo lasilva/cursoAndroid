@@ -3,7 +3,7 @@ package Model_Anunc;
 import java.util.Date;
 
 /**
- * Created by root on 31/03/15.
+ * Ari Sim&otilde;es
  */
 class Anunciante {
 
