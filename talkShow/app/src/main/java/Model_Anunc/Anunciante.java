@@ -5,25 +5,53 @@ import java.util.Date;
 /**
  * Created by root on 31/03/15.
  */
-public class Anunciante {
+class Anunciante {
 
     private String nome;
     private String end;
     private char sexo;
     private String cpf;
-    private Date dtNasc;
+    private Date nasci;
     private String login;
     private String senha;
 
-    public Anunciante(String nome, String end, char sexo, String cpf, Date dtNas, String login, String senha) {
+    public Anunciante(String nome, String end, char sexo, String cpf, Date nasci, String login, String senha) {
 
         nome = nome;
         end = end;
         sexo = sexo;
         cpf = cpf;
-        dtNasc = dtNasc;
+        nasci = nasci;
         login = login;
         senha = senha;
 
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public Date getNasci() {
+        return nasci;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public char getSexo() {
+        return sexo;
     }
 }
