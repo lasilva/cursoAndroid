@@ -8,6 +8,7 @@ import java.util.Date;
 class Anunciante {
 
     private String nome;
+    private String sobreNome;
     private String end;
     private char sexo;
     private String cpf;
@@ -15,9 +16,10 @@ class Anunciante {
     private String login;
     private String senha;
 
-    public Anunciante(String nome, String end, char sexo, String cpf, Date nasci, String login, String senha) {
+    public Anunciante(String nome, String sobreNome, String end, char sexo, String cpf, Date nasci, String login, String senha) {
 
         nome = nome;
+        sobreNome = sobreNome;
         end = end;
         sexo = sexo;
         cpf = cpf;
@@ -29,6 +31,10 @@ class Anunciante {
 
     public String getNome() {
         return nome;
+    }
+
+    public String getSobreNome() {
+        return sobreNome;
     }
 
     public String getEnd() {
