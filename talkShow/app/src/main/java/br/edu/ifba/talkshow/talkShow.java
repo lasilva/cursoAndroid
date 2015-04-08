@@ -6,19 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class TalkShowEvent extends ActionBarActivity {
+public class talkShow extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_talk_show_event);
+        setContentView(R.layout.activity_talk_show);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_talk_show_event, menu);
+        getMenuInflater().inflate(R.menu.menu_talk_show, menu);
         return true;
     }
 

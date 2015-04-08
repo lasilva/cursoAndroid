@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".talkShow">
+
+    <TextView android:text="@string/cadastro" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:theme="@style/AppTheme"
+        android:textColor="#FFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome_hint"
+            android:inputType="textNoSuggestions" />
+
+        <EditText
+            android:id="@+id/sobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sobrenome_hint"
+            android:inputType="textNoSuggestions" />
+
+        <EditText
+            android:id="@+id/endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/endereco_hint"
+            android:inputType="textNoSuggestions" />
+
+        <EditText
+            android:id="@+id/cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cpf_hint"
+            android:inputType="textNoSuggestions" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/sexo_m"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/sexo_f"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/data"
+            android:hint="@string/data"/>
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_hint"
+            android:inputType="textNoSuggestions" />
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senha_hint"
+            android:inputType="textNoSuggestions" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/enviar"
+            android:hint="@string/enviar"/>
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
