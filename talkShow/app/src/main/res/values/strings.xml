@@ -13,4 +13,20 @@
     <string name="sexo_m">Masculino</string>
     <string name="sexo_f">Feminino</string>
     <string name="data">00/00/0000</string>
+
+    <string name="usuario">Cadastro Usuário</string>
+    <string name="NomeUsuario">Nome</string>
+    <string name="SobrenomeUsuario">Sobrenome</string>
+    <string name="EnderecoUsuario">Endereço</string>
+    <string name="CpfUsuario">Cpf</string>
+    <string name="LoginUsuario">Login</string>
+    <string name="SenhaUsuario">Senha</string>
+    <string name="EnviarUsuario">Enviar</string>
+    <string name="Sexo_m_Usuario">Masculino</string>
+    <string name="Sexo_f_Usuario">Feminino</string>
+    <string name="DataUsuario">00/00/0000</string>
+
+
+
+
 </resources>
