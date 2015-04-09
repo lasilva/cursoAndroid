@@ -3,7 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".talkShow">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".talkShow"
+    android:background="@android:color/black">
 
     <TextView android:text="@string/cadastro" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
+        android:theme="@android:style/Theme.Black"
         android:layout_alignParentStart="true">
 
         <EditText
