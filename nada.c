@@ -1,3 +1,0 @@
-Qualquer coisa
-
-Mais alguma coisa!
