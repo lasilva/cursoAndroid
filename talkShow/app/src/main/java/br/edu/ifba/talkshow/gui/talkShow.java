@@ -1,9 +1,16 @@
-package br.edu.ifba.talkshow;
+package br.edu.ifba.talkshow.gui;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import java.util.concurrent.ExecutionException;
+
+import br.edu.ifba.talkshow.R;
+import br.edu.ifba.talkshow.gui.task.UsuarioCadTask;
 
 
 public class talkShow extends ActionBarActivity {
@@ -35,5 +42,15 @@ public class talkShow extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void metodo(View view) throws ExecutionException, InterruptedException {
+
+        UsuarioCadTask task = new UsuarioCadTask();
+        Boolean result = task.execute("Lucas", "Almeida Silva", "M", "11/11/1994", "lasilva", "0904203").get();
+        if(result){
+            TextView txt = (TextView) findViewById(R.id.txtResult);
+            txt.setText("resultado: tem mais que 5 letras");
+        }
     }
 }
