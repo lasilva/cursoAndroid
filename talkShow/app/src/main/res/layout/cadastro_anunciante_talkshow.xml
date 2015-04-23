@@ -28,28 +28,28 @@
         android:layout_alignParentStart="true">
 
         <EditText
-            android:id="@+id/nome"
+            android:id="@+id/nomeAnunc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nome_hint"
             android:inputType="textNoSuggestions" />
 
         <EditText
-            android:id="@+id/sobrenome"
+            android:id="@+id/sobrenomeAnunc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/sobrenome_hint"
             android:inputType="textNoSuggestions" />
 
         <EditText
-            android:id="@+id/endereco"
+            android:id="@+id/enderecoAnunc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/endereco_hint"
             android:inputType="textNoSuggestions" />
 
         <EditText
-            android:id="@+id/cpf"
+            android:id="@+id/cpfAnunc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/cpf_hint"
@@ -60,14 +60,14 @@
             android:layout_height="wrap_content"
             android:hint="@string/sexo_m"
             android:clickable="true"
-            android:id="@+id/sexo_M" />
+            android:id="@+id/sexo_MAnunc" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/sexo_f"
             android:clickable="true"
-            android:id="@+id/sexo_F" />
+            android:id="@+id/sexo_FAnunc" />
 
 
         <EditText
@@ -75,18 +75,18 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/data"
+            android:id="@+id/dataAnunc"
             android:hint="@string/data"/>
 
         <EditText
-            android:id="@+id/login"
+            android:id="@+id/loginAnunc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login_hint"
             android:inputType="textNoSuggestions" />
 
         <EditText
-            android:id="@+id/senha"
+            android:id="@+id/senhaAnunc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/senha_hint"
@@ -95,7 +95,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/enviar"
+            android:id="@+id/enviarAnunc"
             android:hint="@string/enviar"/>
 
 

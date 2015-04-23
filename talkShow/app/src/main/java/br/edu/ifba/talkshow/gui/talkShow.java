@@ -5,12 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import br.edu.ifba.talkshow.R;
+import br.edu.ifba.talkshow.gui.task.AnuncianteCadTask;
 import br.edu.ifba.talkshow.gui.task.UsuarioCadTask;
+import br.edu.ifba.talkshow.model.data.Anunciante;
 
 
 public class talkShow extends ActionBarActivity {
@@ -53,4 +59,19 @@ public class talkShow extends ActionBarActivity {
             txt.setText("resultado: tem mais que 5 letras");
         }
     }
+
+    public void cadastroAnunciante(View view) throws ExecutionException, InterruptedException{
+
+        AnuncianteCadTask task = new AnuncianteCadTask();
+        TextView nome = (TextView) findViewById(R.id.nomeAnunc);
+        TextView sobrenome = (TextView) findViewById(R.id.sobrenomeAnunc);
+        TextView endereco = (TextView) findViewById(R.id.enderecoAnunc);
+        TextView cpf = (TextView) findViewById(R.id.cpfAnunc);
+        RadioButton M = (RadioButton) findViewById(R.id.sexo_MAnunc);
+        RadioButton F = (RadioButton) findViewById(R.id.sexo_FAnunc);
+        TextView Data = (TextView) findViewById(R.id.dataAnunc);
+        TextView login = (TextView) findViewById(R.id.loginAnunc);
+        TextView senha = (TextView) findViewById(R.id.senhaAnunc);
+    }
+
 }
