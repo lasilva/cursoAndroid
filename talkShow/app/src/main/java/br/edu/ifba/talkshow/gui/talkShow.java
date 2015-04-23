@@ -6,7 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -62,16 +64,42 @@ public class talkShow extends ActionBarActivity {
 
     public void cadastroAnunciante(View view) throws ExecutionException, InterruptedException{
 
+        RadioGroup radioGroup;
+
         AnuncianteCadTask task = new AnuncianteCadTask();
         TextView nome = (TextView) findViewById(R.id.nomeAnunc);
         TextView sobrenome = (TextView) findViewById(R.id.sobrenomeAnunc);
         TextView endereco = (TextView) findViewById(R.id.enderecoAnunc);
         TextView cpf = (TextView) findViewById(R.id.cpfAnunc);
-        RadioButton M = (RadioButton) findViewById(R.id.sexo_MAnunc);
-        RadioButton F = (RadioButton) findViewById(R.id.sexo_FAnunc);
         TextView Data = (TextView) findViewById(R.id.dataAnunc);
         TextView login = (TextView) findViewById(R.id.loginAnunc);
         TextView senha = (TextView) findViewById(R.id.senhaAnunc);
+
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroupAnunc);
+        radioGroup.clearCheck();
+
+        Bundle savedInstanceState = null;
+
+        onCreate(new Bundle(savedInstanceState)); {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.cadastro_anunciante_talkshow);
+
+         /* Attach CheckedChangeListener to radio group */
+            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    RadioButton rb = (RadioButton) group.findViewById(checkedId);
+                    if(null!=rb && checkedId > -1){
+                        String sexo = String.valueOf(rb.getText());
+                    }
+
+                }
+            });
+        }
+
     }
+
+
+
 
 }
