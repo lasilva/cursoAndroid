@@ -1,5 +1,7 @@
 package br.edu.ifba.talkshow.gui;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -61,13 +63,23 @@ public class talkShow extends ActionBarActivity {
             txt.setText("resultado: tem mais que 5 letras");
         }
     }
+    public void cadastroAnunciante (View view){
+        Fragment cadAnunci = new Fragment();
+        FragmentTransaction cadAn = getFragmentManager().beginTransaction();
 
-    public void cadastroAnunciante(View view) throws ExecutionException, InterruptedException{
+        cadAn.replace(R.id.cadastroAnunciante, cadAnunci);
+        cadAn.addToBackStack(null);
+
+        cadAn.commit();
+
+    }
+
+    public void cadAnuncianteExec(View view) throws ExecutionException, InterruptedException{
 
         RadioGroup radioGroup;
 
         AnuncianteCadTask task = new AnuncianteCadTask();
-        TextView nome = (TextView) findViewById(R.id.nomeAnunc);
+        String nome = String.valueOf((TextView) findViewById(R.id.nomeAnunc));
         TextView sobrenome = (TextView) findViewById(R.id.sobrenomeAnunc);
         TextView endereco = (TextView) findViewById(R.id.enderecoAnunc);
         TextView cpf = (TextView) findViewById(R.id.cpfAnunc);
