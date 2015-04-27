@@ -1,7 +1,9 @@
 package br.edu.ifba.talkshow.gui;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +25,7 @@ import br.edu.ifba.talkshow.gui.task.UsuarioCadTask;
 import br.edu.ifba.talkshow.model.data.Anunciante;
 
 
-public class talkShow extends ActionBarActivity {
+public class talkShow extends ActionBarActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,29 +65,20 @@ public class talkShow extends ActionBarActivity {
             txt.setText("resultado: tem mais que 5 letras");
         }
     }
-    public void cadastroAnunciante (View view){
-        Fragment cadAnunci = new Fragment();
-        FragmentTransaction cadAn = getFragmentManager().beginTransaction();
-
-        cadAn.replace(R.id.cadastroAnunciante, cadAnunci);
-        cadAn.addToBackStack(null);
-
-        cadAn.commit();
-
-    }
 
     public void cadAnuncianteExec(View view) throws ExecutionException, InterruptedException{
 
         RadioGroup radioGroup;
 
         AnuncianteCadTask task = new AnuncianteCadTask();
+
         String nome = String.valueOf((TextView) findViewById(R.id.nomeAnunc));
-        TextView sobrenome = (TextView) findViewById(R.id.sobrenomeAnunc);
-        TextView endereco = (TextView) findViewById(R.id.enderecoAnunc);
-        TextView cpf = (TextView) findViewById(R.id.cpfAnunc);
-        TextView Data = (TextView) findViewById(R.id.dataAnunc);
-        TextView login = (TextView) findViewById(R.id.loginAnunc);
-        TextView senha = (TextView) findViewById(R.id.senhaAnunc);
+        String sobrenome = String.valueOf((TextView) findViewById(R.id.sobrenomeAnunc));
+        String endereco = String.valueOf((TextView) findViewById(R.id.enderecoAnunc));
+        String cpf = String.valueOf((TextView) findViewById(R.id.cpfAnunc));
+        String Data = String.valueOf((TextView) findViewById(R.id.dataAnunc));
+        String login = String.valueOf((TextView) findViewById(R.id.loginAnunc));
+        String senha = String.valueOf((TextView) findViewById(R.id.senhaAnunc));
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroupAnunc);
         radioGroup.clearCheck();
@@ -111,7 +104,25 @@ public class talkShow extends ActionBarActivity {
 
     }
 
+    public void teste(View view) throws ExecutionException, InterruptedException{
 
 
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Create new fragment and transaction
+        AnuncianteFragment newFragment = new AnuncianteFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+// Replace whatever is in the fragment_container view with this fragment,
+// and add the transaction to the back stack
+        transaction.replace(R.id.cadastroAnunciante, newFragment);
+        transaction.addToBackStack(null);
+
+// Commit the transaction
+        transaction.commit();
+    }
 
 }
+
+
