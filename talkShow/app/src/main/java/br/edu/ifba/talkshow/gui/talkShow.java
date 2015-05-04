@@ -1,5 +1,7 @@
 package br.edu.ifba.talkshow.gui;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,11 +48,12 @@ public class talkShow extends ActionBarActivity {
 
     public void metodo(View view) throws ExecutionException, InterruptedException {
 
-        UsuarioCadTask task = new UsuarioCadTask();
-        Boolean result = task.execute("Lucas", "Almeida Silva", "M", "11/11/1994", "lasilva", "0904203").get();
-        if(result){
-            TextView txt = (TextView) findViewById(R.id.txtResult);
-            txt.setText("resultado: tem mais que 5 letras");
-        }
+        UsuarioFragment usuario = UsuarioFragment.newInstance("novo", "coisa");
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.principal, usuario);
+        transaction.addToBackStack(null);
+        transaction.commit();
+
     }
 }
