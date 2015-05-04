@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".gui.AnuncianteCad"
+            android:label="@string/title_activity_anunciante_cade" >
+        </activity>
     </application>
 
 </manifest>
