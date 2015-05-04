@@ -1,20 +1,17 @@
-package br.edu.ifba.talkshow.gui;
+package br.edu.ifba.talkshow;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import br.edu.ifba.talkshow.R;
 
 
-public class TalkShow extends ActionBarActivity {
+public class TalkShowActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_talk_show);
+        setContentView(R.layout.fragment_cad_login);
     }
 
 
@@ -38,10 +35,5 @@ public class TalkShow extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void cadastro(View view){
-
-
     }
 }

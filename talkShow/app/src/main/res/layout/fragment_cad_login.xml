@@ -1,9 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="br.edu.ifba.talkshow.CadLoginFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.edu.ifba.talkshow.gui.CadLoginFragment"
+    android:weightSum="1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="@string/cad_login_title"
+        android:textStyle="normal"
+        android:layout_gravity="center"
+        android:textSize="30dp"/>
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:text="@string/login_hint"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:id="@+id/txtLogin"
+             />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:id="@+id/txtSenha"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:text="@string/cadastro"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:id="@+id/btnCad"
+            android:onClick="cadastro"/>
+
+    </LinearLayout>
+
+</LinearLayout>
