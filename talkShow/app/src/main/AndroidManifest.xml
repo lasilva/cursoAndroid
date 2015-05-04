@@ -8,17 +8,12 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".gui.talkShow"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".gui.AnuncianteCad"
             android:label="@string/title_activity_anunciante_cade" >
+        </activity>
+        <activity
+            android:name=".gui.TalkShow"
+            android:label="@string/title_activity_talk_show" >
         </activity>
     </application>
 
